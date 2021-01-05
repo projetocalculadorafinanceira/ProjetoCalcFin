@@ -1,0 +1,24 @@
+*{
+  font: Verdana;
+}
+
+.header2{
+  background-color: #203353;
+  color: white;
+  font-size: 80%;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  text-align: right;
+
+}
+a:hover{
+  color: #E8605F;
+}
+
+body{
+  background-color: #C3E0D6;
+}
