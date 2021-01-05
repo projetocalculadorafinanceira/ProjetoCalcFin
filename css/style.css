@@ -9,16 +9,17 @@
 }
 
 a{
-  color: white;
+  color: white !important;
   text-decoration: none;
   display: flex;
   text-align: right;
 
 }
 a:hover{
-  color: #E8605F;
+  color: #E8605F !important;
 }
 
 body{
   background-color: #C3E0D6;
 }
+
