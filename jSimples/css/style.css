@@ -10,7 +10,7 @@ body{
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background-image: url("https://images.unsplash.com/photo-1543076735-8af9fc5cb9f8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+  background: linear-gradient(to left top, #060047,#2E295C);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
@@ -22,7 +22,7 @@ body{
 
 @media only screen and (min-width: 900px) {
   body {
-    background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=847&q=80");
+    background: linear-gradient(to left top, #060047,#2E295C);
     backdrop-filter: blur(1px);
   }
 }

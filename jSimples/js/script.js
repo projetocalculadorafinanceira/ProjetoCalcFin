@@ -3,23 +3,23 @@
 const calcular = document.querySelector('.getCalc');
 
 function calcFv(pv,time,rate){
-  const resultFv = Math.round(pv*(1+(time*rate)));
-  document.getElementById('result').textContent = `FV = ${resultFv} `;
+  const resultFv = pv*(1+(time*rate));
+  document.getElementById('result').textContent = `FV = ${resultFv.toFixed(4)} `;
 }
 
 function calcPv(fv,time,rate){
-  const resultPv = Math.round(fv / (1+(rate*time)));
-  document.getElementById('result').textContent = `PV = ${resultPv} `;
+  const resultPv = fv / (1+(rate*time));
+  document.getElementById('result').textContent = `PV = ${resultPv.toFixed(4)} `;
 }
 
 function calcTime(fv,pv,rate){
-  const resultTime = Math.round(((fv/pv)-1)/rate);
-  document.getElementById('result').textContent = `Rate = ${resultTime} `;
+  const resultTime = ((fv/pv)-1)/rate;
+  document.getElementById('result').textContent = `Time = ${resultTime.toFixed(4)} `;
 }
 
 function calcRate(fv,pv,time){
-  const resultRate = Math.round(((fv/pv)-1)/time);
-  document.getElementById('result').textContent = `Time = ${resultRate} `;
+  const resultRate = (((fv/pv)-1)/time)*100;
+  document.getElementById('result').textContent = `Rate = ${resultRate.toFixed(4)}% `;
 }
 
 calcular.addEventListener('click',function(){

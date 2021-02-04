@@ -3,27 +3,27 @@
 const calcular = document.querySelector('.getCalc');
 
 function calcFv(pv,time,rate){
-  const resultFv = Math.round(pv*((1+parseFloat(rate))**time));
-  document.getElementById('result').textContent = `FV = ${resultFv}`;
+  const resultFv = pv*((1+parseFloat(rate))**time);
+  document.getElementById('result').textContent = `FV = ${Math.round(resultFv.toFixed(4))}`;
 }
 
 function calcPv(fv,time,rate){
-  const resultPv = Math.round(fv/(1+(parseFloat(rate)**time)));
-  document.getElementById('result').textContent = `PV = ${resultPv}`;
+  const resultPv = fv/((1+parseFloat(rate))**time);
+  document.getElementById('result').textContent = `PV = ${Math.round(resultPv.toFixed(4))}`;
 }
 
 function calcTime(fv,pv,rate){
   const log1 = fv/pv;
   const log2 = (1+parseFloat(rate));
   const time = Math.log(log1)/Math.log(log2);
-  document.getElementById('result').textContent = `Time: = ${time}`;
+  document.getElementById('result').textContent = `Time: = ${Math.round(time.toFixed(4))}`;
 }
 
 function calcRate(fv,pv,time){
   const step1 = fv/pv;
   const step2 = Math.pow(step1,1/time);
   const step3 = step2-1;
-  document.getElementById('result').textContent = `Rate: = ${step3}`;
+  document.getElementById('result').textContent = `Rate: = ${step3.toFixed(4)*100}%`;
 }
 
 calcular.addEventListener('click',function(){
